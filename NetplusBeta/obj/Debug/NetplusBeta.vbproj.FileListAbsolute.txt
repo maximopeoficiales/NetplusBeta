@@ -1,0 +1,13 @@
+C:\Users\Maximo\source\repos\NetplusBeta\NetplusBeta\bin\Debug\NetplusBeta.exe.config
+C:\Users\Maximo\source\repos\NetplusBeta\NetplusBeta\bin\Debug\NetplusBeta.exe
+C:\Users\Maximo\source\repos\NetplusBeta\NetplusBeta\bin\Debug\NetplusBeta.pdb
+C:\Users\Maximo\source\repos\NetplusBeta\NetplusBeta\bin\Debug\NetplusBeta.xml
+C:\Users\Maximo\source\repos\NetplusBeta\NetplusBeta\obj\Debug\NetplusBeta.vbprojAssemblyReference.cache
+C:\Users\Maximo\source\repos\NetplusBeta\NetplusBeta\obj\Debug\NetplusBeta.Resources.resources
+C:\Users\Maximo\source\repos\NetplusBeta\NetplusBeta\obj\Debug\NetplusBeta.Form1.resources
+C:\Users\Maximo\source\repos\NetplusBeta\NetplusBeta\obj\Debug\NetplusBeta.vbproj.GenerateResource.cache
+C:\Users\Maximo\source\repos\NetplusBeta\NetplusBeta\obj\Debug\NetplusBeta.exe
+C:\Users\Maximo\source\repos\NetplusBeta\NetplusBeta\obj\Debug\NetplusBeta.xml
+C:\Users\Maximo\source\repos\NetplusBeta\NetplusBeta\obj\Debug\NetplusBeta.pdb
+C:\Users\Maximo\source\repos\NetplusBeta\NetplusBeta\obj\Debug\NetplusBeta.Usuarios.resources
+C:\Users\Maximo\source\repos\NetplusBeta\NetplusBeta\obj\Debug\NetplusBeta.MenuPrincipal.resources
