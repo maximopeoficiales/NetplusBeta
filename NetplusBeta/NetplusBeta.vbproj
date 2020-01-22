@@ -75,14 +75,22 @@
   <ItemGroup>
     <Compile Include="Funciones\FClientes.vb" />
     <Compile Include="Funciones\FConexion.vb" />
-    <Compile Include="Logica\VUsers.vb" />
-    <Compile Include="Presentacion\Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Funciones\FContratos.vb" />
+    <Compile Include="Funciones\FEmpleados.vb" />
+    <Compile Include="Funciones\FFacturaContrato.vb" />
+    <Compile Include="Funciones\FFacturaPagoMensual.vb" />
+    <Compile Include="Funciones\FGanancias.vb" />
+    <Compile Include="Funciones\FPagoMensuales.vb" />
+    <Compile Include="Funciones\FPlanes.vb" />
+    <Compile Include="Funciones\FServicios.vb" />
+    <Compile Include="Logica\LClientes.vb" />
+    <Compile Include="Logica\LCliente_Servicio.vb" />
+    <Compile Include="Logica\LEmpleados.vb" />
+    <Compile Include="Logica\LFacturaContrato.vb" />
+    <Compile Include="Logica\LFacturasPagoMensual.vb" />
+    <Compile Include="Logica\LPagoMensual.vb" />
+    <Compile Include="Logica\LPlanes.vb" />
+    <Compile Include="Logica\LServicios.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -98,18 +106,91 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Presentacion\MenuPrincipal.Designer.vb">
+    <Compile Include="Presentacion\Clientes\AdministarClientes.Designer.vb">
+      <DependentUpon>AdministarClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Clientes\AdministarClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Contratos\AdministrarContratos.Designer.vb">
+      <DependentUpon>AdministrarContratos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Contratos\AdministrarContratos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Contratos\ConsultarContratos.Designer.vb">
+      <DependentUpon>ConsultarContratos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Contratos\ConsultarContratos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Contratos\RegistrarContrato.Designer.vb">
+      <DependentUpon>RegistrarContrato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Contratos\RegistrarContrato.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Empleados\AdministrarEmpleados.Designer.vb">
+      <DependentUpon>AdministrarEmpleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Empleados\AdministrarEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Facturas\ConsultarFacturas.Designer.vb">
+      <DependentUpon>ConsultarFacturas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Facturas\ConsultarFacturas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Ganancias\AdministrarGanancias.Designer.vb">
+      <DependentUpon>AdministrarGanancias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Ganancias\AdministrarGanancias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Menu\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Menu\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Menu\MenuPrincipal.Designer.vb">
       <DependentUpon>MenuPrincipal.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\MenuPrincipal.vb">
+    <Compile Include="Presentacion\Menu\MenuPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Usuarios.Designer.vb">
-      <DependentUpon>Usuarios.vb</DependentUpon>
+    <Compile Include="Presentacion\Menu\MenuResumen.Designer.vb">
+      <DependentUpon>MenuResumen.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Usuarios.vb">
+    <Compile Include="Presentacion\Menu\MenuResumen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentacion\Pagos Mensuales\PagosMensuales.Designer.vb">
+      <DependentUpon>PagosMensuales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Pagos Mensuales\PagosMensuales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Planes\AdministrarPlanes.Designer.vb">
+      <DependentUpon>AdministrarPlanes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Planes\AdministrarPlanes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Servicios\AdministrarServicios.Designer.vb">
+      <DependentUpon>AdministrarServicios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Servicios\AdministrarServicios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\template.Designer.vb">
+      <DependentUpon>template.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\template.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sesion\ControlDeSesiones.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -118,14 +199,47 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Clientes\AdministarClientes.resx">
+      <DependentUpon>AdministarClientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\MenuPrincipal.resx">
+    <EmbeddedResource Include="Presentacion\Contratos\AdministrarContratos.resx">
+      <DependentUpon>AdministrarContratos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Contratos\ConsultarContratos.resx">
+      <DependentUpon>ConsultarContratos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Contratos\RegistrarContrato.resx">
+      <DependentUpon>RegistrarContrato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Empleados\AdministrarEmpleados.resx">
+      <DependentUpon>AdministrarEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Facturas\ConsultarFacturas.resx">
+      <DependentUpon>ConsultarFacturas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Ganancias\AdministrarGanancias.resx">
+      <DependentUpon>AdministrarGanancias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Menu\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Menu\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Usuarios.resx">
-      <DependentUpon>Usuarios.vb</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Menu\MenuResumen.resx">
+      <DependentUpon>MenuResumen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Pagos Mensuales\PagosMensuales.resx">
+      <DependentUpon>PagosMensuales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Planes\AdministrarPlanes.resx">
+      <DependentUpon>AdministrarPlanes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Servicios\AdministrarServicios.resx">
+      <DependentUpon>AdministrarServicios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\template.resx">
+      <DependentUpon>template.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -140,12 +254,128 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\logo.PNG" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\users.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\users1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_empleado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_empleado1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portada.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empleados2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empleados21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clienteprincipal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\internet2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pack1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dinero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bolsa_dinero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mensualidades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\planes2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\servicios2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empleados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrar_cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizar_cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registrar_cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contratoblanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contrato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contrato1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gananciasbillete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dinero1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkradio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uncheck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factura11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factura12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factura111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toma-de-decisiones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salirsession.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facturas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billall.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

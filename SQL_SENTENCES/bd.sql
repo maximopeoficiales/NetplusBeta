@@ -8,29 +8,26 @@ create table empleados(
     cod_empleado int identity,
     usuario varchar(20),
     contrasena varchar(20),
-    nombre varchar(50),
-    apellido varchar(50),
+    nombre varchar(100),
     primary key(cod_empleado)
   );
 go
 
-INSERT INTO empleados VALUES ('admin','admin','Juan','Perez');
-INSERT INTO empleados VALUES ('jimmy','jimmy','Jimmy','Carguamango');
+INSERT INTO empleados VALUES ('admin','admin','Juan Perez');
+INSERT INTO empleados VALUES ('jimmy','jimmy','Jimmy Carguamango');
   
   create table clientes(
     id_cliente VARCHAR(8),
-    nombre varchar(50),
-    apellido varchar(50),
+    nombre varchar(100),
     direccion varchar(200),
     zona varchar(50),
     celular varchar(12),
     email varchar(50),
-    estado_cliente varchar(10)
     PRIMARY KEY(id_cliente)
   );
 GO
-INSERT INTO clientes VALUES('70889470','Maximo Junior','Apaza Chirhuana','mz M lt 15 Eden del Manantial','Lomas','92715648','maximopeoficiales@gmail.com','ACTIVO');
-INSERT INTO clientes VALUES('10012164','Juan','Perez Galvez','La laguna de Oxidacion','La cantera','998144600','juanhz@gmail.com','ACTIVO');
+INSERT INTO clientes VALUES('70889470','Maximo Junior Apaza Chirhuana','mz M lt 15 Eden del Manantial','Lomas','92715648','maximopeoficiales@gmail.com');
+INSERT INTO clientes VALUES('10012164','Juan Perez Galvez','La laguna de Oxidacion','La cantera','998144600','juanhz@gmail.com');
 
   CREATE TABLE planes(
     id_plan VARCHAR(20),
@@ -86,7 +83,8 @@ INSERT INTO servicios VALUES('DUO',90,'DUO3');
     id_cliente_servicio INT IDENTITY,
     fecha_instalacion date,
     pago_instalacion SMALLMONEY,
-    id_cliente VARCHAR(8) ,
+    estado_contrato varchar(30),
+    id_cliente VARCHAR(8),
     CONSTRAINT fk_id_cli1 FOREIGN KEY(id_cliente) REFERENCES clientes(id_cliente),
     id_servicio INT,
     CONSTRAINT fk_id_ser FOREIGN KEY(id_servicio) REFERENCES servicios(id_servicio),
@@ -95,8 +93,8 @@ INSERT INTO servicios VALUES('DUO',90,'DUO3');
     PRIMARY KEY(id_cliente_servicio)
   );
   GO
-  INSERT INTO cliente_servicio VALUES('05/11/2019',40.00,'70889470',1,1);
-  INSERT INTO cliente_servicio VALUES('03/10/2019',40.00,'10012164',7,2);
+  INSERT INTO cliente_servicio VALUES('05/11/2019',40.00,'ACTIVO','70889470',1,1);
+  INSERT INTO cliente_servicio VALUES('03/10/2019',40.00,'ACTIVO','10012164',7,2);
     
     CREATE TABLE pago_mensual(
     id_pago_mensual int IDENTITY,
@@ -106,8 +104,29 @@ INSERT INTO servicios VALUES('DUO',90,'DUO3');
     pago_mensual SMALLMONEY,
     id_cliente_servicio int,
     CONSTRAINT fk_cli_servi1 FOREIGN KEY(id_cliente_servicio) REFERENCES cliente_servicio(id_cliente_servicio),
-    PRIMARY KEY(id_cliente_servicio)
+    PRIMARY KEY(id_pago_mensual)
   );
   INSERT INTO pago_mensual VALUES('PAGO','05/12/2019','05/12/2019',40.00,1);
   INSERT INTO pago_mensual VALUES('PAGO','03/11/2019','03/11/2019',70.00,2);
 GO
+
+CREATE TABLE facturasPagoMensual(
+  id_factura_pm int IDENTITY(200,1),
+  id_pago_mensual int
+   CONSTRAINT fk_fact FOREIGN KEY(id_pago_mensual) REFERENCES pago_mensual(id_pago_mensual),
+  PRIMARY KEY(id_factura_pm)
+);
+GO
+INSERT INTO facturasPagoMensual VALUES(1);
+INSERT INTO facturasPagoMensual VALUES(2);
+
+
+CREATE TABLE FacturaContrato(
+  id_factura_c int IDENTITY(300,1),
+  id_cliente_servicio int
+  CONSTRAINT fk_factc FOREIGN KEY(id_cliente_servicio) REFERENCES cliente_servicio(id_cliente_servicio),
+  PRIMARY KEY(id_factura_c)
+);
+GO
+INSERT INTO FacturaContrato VALUES(1);
+INSERT INTO FacturaContrato VALUES(2);
