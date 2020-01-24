@@ -23,6 +23,8 @@ Partial Class PagosMensuales
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PanelRaiz = New System.Windows.Forms.Panel()
+        Me.txt_pagoPendientes = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txt_estadoPago = New System.Windows.Forms.ComboBox()
         Me.txt_BuscarFechaPago = New System.Windows.Forms.DateTimePicker()
@@ -49,18 +51,19 @@ Partial Class PagosMensuales
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.txt_pagoPendientes = New System.Windows.Forms.Label()
+        Me.ActualizarCampos = New System.Windows.Forms.PictureBox()
         Me.PanelRaiz.SuspendLayout()
         CType(Me.btn_BuscarPorFecha, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imagen_buscar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tablaMensualidades, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.ActualizarCampos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelRaiz
         '
         Me.PanelRaiz.BackgroundImage = Global.NetplusBeta.My.Resources.Resources.fondo1
+        Me.PanelRaiz.Controls.Add(Me.ActualizarCampos)
         Me.PanelRaiz.Controls.Add(Me.txt_pagoPendientes)
         Me.PanelRaiz.Controls.Add(Me.Label11)
         Me.PanelRaiz.Controls.Add(Me.Button1)
@@ -93,6 +96,26 @@ Partial Class PagosMensuales
         Me.PanelRaiz.Name = "PanelRaiz"
         Me.PanelRaiz.Size = New System.Drawing.Size(1624, 1055)
         Me.PanelRaiz.TabIndex = 4
+        '
+        'txt_pagoPendientes
+        '
+        Me.txt_pagoPendientes.AutoSize = True
+        Me.txt_pagoPendientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_pagoPendientes.Location = New System.Drawing.Point(999, 965)
+        Me.txt_pagoPendientes.Name = "txt_pagoPendientes"
+        Me.txt_pagoPendientes.Size = New System.Drawing.Size(49, 32)
+        Me.txt_pagoPendientes.TabIndex = 77
+        Me.txt_pagoPendientes.Text = "30"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(540, 965)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(431, 32)
+        Me.Label11.TabIndex = 77
+        Me.Label11.Text = "Pagos Pendientes Del Cliente:"
         '
         'Button1
         '
@@ -381,25 +404,17 @@ Partial Class PagosMensuales
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Administrar Mensualidades"
         '
-        'Label11
+        'ActualizarCampos
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(540, 965)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(431, 32)
-        Me.Label11.TabIndex = 77
-        Me.Label11.Text = "Pagos Pendientes Del Cliente:"
-        '
-        'txt_pagoPendientes
-        '
-        Me.txt_pagoPendientes.AutoSize = True
-        Me.txt_pagoPendientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_pagoPendientes.Location = New System.Drawing.Point(999, 965)
-        Me.txt_pagoPendientes.Name = "txt_pagoPendientes"
-        Me.txt_pagoPendientes.Size = New System.Drawing.Size(49, 32)
-        Me.txt_pagoPendientes.TabIndex = 77
-        Me.txt_pagoPendientes.Text = "30"
+        Me.ActualizarCampos.BackColor = System.Drawing.Color.Transparent
+        Me.ActualizarCampos.BackgroundImage = Global.NetplusBeta.My.Resources.Resources.actualizar_cliente
+        Me.ActualizarCampos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ActualizarCampos.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ActualizarCampos.Location = New System.Drawing.Point(1474, 62)
+        Me.ActualizarCampos.Name = "ActualizarCampos"
+        Me.ActualizarCampos.Size = New System.Drawing.Size(100, 50)
+        Me.ActualizarCampos.TabIndex = 51
+        Me.ActualizarCampos.TabStop = False
         '
         'PagosMensuales
         '
@@ -417,6 +432,7 @@ Partial Class PagosMensuales
         CType(Me.tablaMensualidades, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.ActualizarCampos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -450,4 +466,5 @@ Partial Class PagosMensuales
     Friend WithEvents Button1 As Button
     Friend WithEvents txt_pagoPendientes As Label
     Friend WithEvents Label11 As Label
+    Friend WithEvents ActualizarCampos As PictureBox
 End Class

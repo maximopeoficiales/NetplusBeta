@@ -95,4 +95,8 @@
     Private Sub btn_eliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
         limpiardatos()
     End Sub
+
+    Private Sub ActualizarCampos_Click(sender As Object, e As EventArgs) Handles ActualizarCampos.Click
+        autoload()
+    End Sub
 End Class

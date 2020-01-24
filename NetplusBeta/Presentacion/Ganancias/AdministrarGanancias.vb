@@ -21,4 +21,8 @@
 
         mostrarganancias()
     End Sub
+
+    Private Sub ActualizarCampos_Click(sender As Object, e As EventArgs) Handles ActualizarCampos.Click
+        mostrarganancias()
+    End Sub
 End Class

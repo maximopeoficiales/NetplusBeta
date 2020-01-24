@@ -35,16 +35,19 @@ Partial Class AdministrarGanancias
         Me.tablaGanancias = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ActualizarCampos = New System.Windows.Forms.PictureBox()
         Me.PanelRaiz.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelConDinero.SuspendLayout()
         CType(Me.tablaGanancias, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.ActualizarCampos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelRaiz
         '
         Me.PanelRaiz.BackgroundImage = Global.NetplusBeta.My.Resources.Resources.fondo1
+        Me.PanelRaiz.Controls.Add(Me.ActualizarCampos)
         Me.PanelRaiz.Controls.Add(Me.PictureBox2)
         Me.PanelRaiz.Controls.Add(Me.btn_GananciasporRango)
         Me.PanelRaiz.Controls.Add(Me.PanelConDinero)
@@ -202,6 +205,18 @@ Partial Class AdministrarGanancias
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Administrar Ganancias"
         '
+        'ActualizarCampos
+        '
+        Me.ActualizarCampos.BackColor = System.Drawing.Color.Transparent
+        Me.ActualizarCampos.BackgroundImage = Global.NetplusBeta.My.Resources.Resources.actualizar_cliente
+        Me.ActualizarCampos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ActualizarCampos.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ActualizarCampos.Location = New System.Drawing.Point(1406, 77)
+        Me.ActualizarCampos.Name = "ActualizarCampos"
+        Me.ActualizarCampos.Size = New System.Drawing.Size(100, 50)
+        Me.ActualizarCampos.TabIndex = 50
+        Me.ActualizarCampos.TabStop = False
+        '
         'AdministrarGanancias
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -219,6 +234,7 @@ Partial Class AdministrarGanancias
         CType(Me.tablaGanancias, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.ActualizarCampos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -236,4 +252,5 @@ Partial Class AdministrarGanancias
     Friend WithEvents txt_ganancias As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents ActualizarCampos As PictureBox
 End Class

@@ -113,4 +113,8 @@
     Private Sub tablaclientes_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles tablaclientes.CellDoubleClick
         Copiardatos()
     End Sub
+
+    Private Sub ActualizarCampos_Click(sender As Object, e As EventArgs) Handles ActualizarCampos.Click
+        MostrarClientes()
+    End Sub
 End Class

@@ -95,4 +95,8 @@
     Private Sub imagen_buscar_Click(sender As Object, e As EventArgs) Handles imagen_buscar.Click
 
     End Sub
+
+    Private Sub ActualizarCampos_Click(sender As Object, e As EventArgs) Handles ActualizarCampos.Click
+        mostrarmensualidades()
+    End Sub
 End Class

@@ -37,10 +37,12 @@ Partial Class MenuResumen
         Me.btn_VerPlanes = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.label_usuario = New System.Windows.Forms.Label()
+        Me.ActualizarCampos = New System.Windows.Forms.PictureBox()
         Me.PanelMenuInicio.SuspendLayout()
         Me.PanelRaiz.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ActualizarCampos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelMenuInicio
@@ -58,6 +60,7 @@ Partial Class MenuResumen
         '
         Me.PanelRaiz.BackgroundImage = Global.NetplusBeta.My.Resources.Resources.fondo1
         Me.PanelRaiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelRaiz.Controls.Add(Me.ActualizarCampos)
         Me.PanelRaiz.Controls.Add(Me.btn_realizarcontrato)
         Me.PanelRaiz.Controls.Add(Me.ContadorPlanes)
         Me.PanelRaiz.Controls.Add(Me.ContadorServicios)
@@ -280,6 +283,18 @@ Partial Class MenuResumen
         Me.label_usuario.TabIndex = 26
         Me.label_usuario.Text = "Usuario"
         '
+        'ActualizarCampos
+        '
+        Me.ActualizarCampos.BackColor = System.Drawing.Color.Transparent
+        Me.ActualizarCampos.BackgroundImage = Global.NetplusBeta.My.Resources.Resources.actualizar_cliente
+        Me.ActualizarCampos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ActualizarCampos.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ActualizarCampos.Location = New System.Drawing.Point(1449, 12)
+        Me.ActualizarCampos.Name = "ActualizarCampos"
+        Me.ActualizarCampos.Size = New System.Drawing.Size(100, 50)
+        Me.ActualizarCampos.TabIndex = 50
+        Me.ActualizarCampos.TabStop = False
+        '
         'MenuResumen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -294,6 +309,7 @@ Partial Class MenuResumen
         Me.PanelRaiz.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ActualizarCampos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -313,4 +329,5 @@ Partial Class MenuResumen
     Friend WithEvents ContadorClientes As Label
     Friend WithEvents ContadorEmpleados As Label
     Friend WithEvents btn_realizarcontrato As Button
+    Friend WithEvents ActualizarCampos As PictureBox
 End Class

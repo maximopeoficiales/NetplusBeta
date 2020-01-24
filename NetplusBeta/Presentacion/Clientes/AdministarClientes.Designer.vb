@@ -45,15 +45,18 @@ Partial Class AdministarClientes
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ActualizarCampos = New System.Windows.Forms.PictureBox()
         Me.PanelRaiz.SuspendLayout()
         CType(Me.imagen_buscar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tablaclientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.ActualizarCampos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelRaiz
         '
         Me.PanelRaiz.BackgroundImage = Global.NetplusBeta.My.Resources.Resources.fondo1
+        Me.PanelRaiz.Controls.Add(Me.ActualizarCampos)
         Me.PanelRaiz.Controls.Add(Me.imagen_buscar)
         Me.PanelRaiz.Controls.Add(Me.txt_dni)
         Me.PanelRaiz.Controls.Add(Me.Label10)
@@ -326,6 +329,18 @@ Partial Class AdministarClientes
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Administrar Clientes"
         '
+        'ActualizarCampos
+        '
+        Me.ActualizarCampos.BackColor = System.Drawing.Color.Transparent
+        Me.ActualizarCampos.BackgroundImage = Global.NetplusBeta.My.Resources.Resources.actualizar_cliente
+        Me.ActualizarCampos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ActualizarCampos.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ActualizarCampos.Location = New System.Drawing.Point(1524, 62)
+        Me.ActualizarCampos.Name = "ActualizarCampos"
+        Me.ActualizarCampos.Size = New System.Drawing.Size(100, 50)
+        Me.ActualizarCampos.TabIndex = 46
+        Me.ActualizarCampos.TabStop = False
+        '
         'AdministarClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -341,6 +356,7 @@ Partial Class AdministarClientes
         CType(Me.tablaclientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.ActualizarCampos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -368,4 +384,5 @@ Partial Class AdministarClientes
     Friend WithEvents txt_dni As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents imagen_buscar As PictureBox
+    Friend WithEvents ActualizarCampos As PictureBox
 End Class

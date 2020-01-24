@@ -2,6 +2,11 @@
     Dim validacion
     Dim fn As New FServicios
     Dim fp As New FPlanes
+    Private Sub cargardatos()
+        PropiedadesDatagrid()
+        fp.FnLlenarComboPlanes(cb_id_plan)
+        MostrarServicios()
+    End Sub
     Private Sub Copiardatos()
         Try
             txt_codServicio.Text = tablaServicios.SelectedCells.Item(1).Value
@@ -23,7 +28,6 @@
         tablaServicios.SelectionMode = DataGridViewSelectionMode.FullRowSelect 'activa la multiseleccion'
         tablaServicios.AllowUserToAddRows = False
         tablaServicios.AllowUserToResizeRows = False
-        MostrarServicios()
         txt_codServicio.ReadOnly = True
     End Sub
     Private Sub MostrarServicios()
@@ -93,8 +97,7 @@
     End Sub
 
     Private Sub AdministrarServicios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        PropiedadesDatagrid()
-        fp.FnLlenarComboPlanes(cb_id_plan)
+        cargardatos()
     End Sub
 
     Private Sub btn_eliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
@@ -112,5 +115,9 @@
     Private Sub txt_buscardni_TextChanged(sender As Object, e As EventArgs) Handles txt_buscartipoSERVICIO.TextChanged
         MostrarServicioPorTipoServicio()
 
+    End Sub
+
+    Private Sub ActualizarCampos_Click(sender As Object, e As EventArgs) Handles ActualizarCampos.Click
+        cargardatos()
     End Sub
 End Class

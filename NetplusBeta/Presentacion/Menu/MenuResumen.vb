@@ -3,13 +3,17 @@
     Dim fp As New FPlanes
     Dim fs As New FServicios
     Dim fe As New FEmpleados
-
-    Private Sub MenuResumen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub cargarDatos()
         label_usuario.Text = ObtenerUsuarioActivo()
         ContadorClientes.Text = fn.ContarClientes
         ContadorEmpleados.Text = fe.ContarEmpleados
         ContadorPlanes.Text = fp.ContarPlanes
         ContadorServicios.Text = fs.ContarServicios
+    End Sub
+
+
+    Private Sub MenuResumen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cargarDatos()
 
     End Sub
 
@@ -47,5 +51,9 @@
 
     Private Sub btn_realizarcontrato_Click(sender As Object, e As EventArgs) Handles btn_realizarcontrato.Click
         MenuPrincipal.abrirformenpanel(RegistrarContrato)
+    End Sub
+
+    Private Sub ActualizarCampos_Click(sender As Object, e As EventArgs) Handles ActualizarCampos.Click
+        cargarDatos()
     End Sub
 End Class

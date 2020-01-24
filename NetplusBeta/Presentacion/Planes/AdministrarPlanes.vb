@@ -107,4 +107,8 @@
     Private Sub btn_registrar_Click(sender As Object, e As EventArgs) Handles btn_registrar.Click
         RegistrarPLAN()
     End Sub
+
+    Private Sub ActualizarCampos_Click(sender As Object, e As EventArgs) Handles ActualizarCampos.Click
+        MostrarPlanes()
+    End Sub
 End Class

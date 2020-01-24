@@ -119,4 +119,8 @@
     Private Sub tablaEmpleados_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles tablaEmpleados.CellDoubleClick
         Copiardatos()
     End Sub
+
+    Private Sub ActualizarCampos_Click(sender As Object, e As EventArgs) Handles ActualizarCampos.Click
+        MostrarEmpleados()
+    End Sub
 End Class

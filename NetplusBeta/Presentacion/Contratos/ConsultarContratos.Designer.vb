@@ -36,15 +36,18 @@ Partial Class ConsultarContratos
         Me.Label13 = New System.Windows.Forms.Label()
         Me.btn_nuevo_contrato = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ActualizarCampos = New System.Windows.Forms.PictureBox()
         Me.PanelRaiz.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tablaContratos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.ActualizarCampos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelRaiz
         '
         Me.PanelRaiz.BackgroundImage = Global.NetplusBeta.My.Resources.Resources.fondo1
+        Me.PanelRaiz.Controls.Add(Me.ActualizarCampos)
         Me.PanelRaiz.Controls.Add(Me.PictureBox2)
         Me.PanelRaiz.Controls.Add(Me.tablaContratos)
         Me.PanelRaiz.Controls.Add(Me.btn_actualizar)
@@ -214,6 +217,18 @@ Partial Class ConsultarContratos
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Nuevo Contrato"
         '
+        'ActualizarCampos
+        '
+        Me.ActualizarCampos.BackColor = System.Drawing.Color.Transparent
+        Me.ActualizarCampos.BackgroundImage = Global.NetplusBeta.My.Resources.Resources.actualizar_cliente
+        Me.ActualizarCampos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ActualizarCampos.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ActualizarCampos.Location = New System.Drawing.Point(1493, 62)
+        Me.ActualizarCampos.Name = "ActualizarCampos"
+        Me.ActualizarCampos.Size = New System.Drawing.Size(100, 50)
+        Me.ActualizarCampos.TabIndex = 47
+        Me.ActualizarCampos.TabStop = False
+        '
         'ConsultarContratos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -229,6 +244,7 @@ Partial Class ConsultarContratos
         CType(Me.tablaContratos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.ActualizarCampos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -247,4 +263,5 @@ Partial Class ConsultarContratos
     Friend WithEvents Label13 As Label
     Friend WithEvents btn_nuevo_contrato As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents ActualizarCampos As PictureBox
 End Class

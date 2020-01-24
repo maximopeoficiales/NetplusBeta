@@ -41,4 +41,8 @@
             tablaContratos.DataSource = fn.FnBuscarContratosEntreFechas(fecha1, fecha2)
         End If
     End Sub
+
+    Private Sub ActualizarCampos_Click(sender As Object, e As EventArgs) Handles ActualizarCampos.Click
+        MostrarContratos()
+    End Sub
 End Class

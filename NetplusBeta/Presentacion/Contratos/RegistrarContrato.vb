@@ -95,6 +95,18 @@
         End Try
 
     End Sub
+    Private Sub cargardatos()
+        Try
+            txt_clienteServicio.ReadOnly = True
+            fe.FnLlenarComboNombresEmpleado(txt_codEmpleado)
+            fs.FnLlenarComboServiciosIdPlan(txt_idServicio)
+            TablaClienteResumen.SelectionMode = DataGridViewSelectionMode.FullRowSelect 'activa la multiseleccion '
+            TablaClienteResumen.AllowUserToAddRows = False 'funciones para a dar doble click aparezcan los datos'
+            TablaClienteResumen.AllowUserToResizeRows = False
+        Catch ex As Exception
+
+        End Try
+    End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
@@ -109,16 +121,7 @@
     End Sub
 
     Private Sub RegistrarContrato_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Try
-            txt_clienteServicio.ReadOnly = True
-            fe.FnLlenarComboNombresEmpleado(txt_codEmpleado)
-            fs.FnLlenarComboServiciosIdPlan(txt_idServicio)
-            TablaClienteResumen.SelectionMode = DataGridViewSelectionMode.FullRowSelect 'activa la multiseleccion '
-            TablaClienteResumen.AllowUserToAddRows = False 'funciones para a dar doble click aparezcan los datos'
-            TablaClienteResumen.AllowUserToResizeRows = False
-        Catch ex As Exception
 
-        End Try
 
     End Sub
 
@@ -139,5 +142,9 @@
 
     Private Sub TablaClienteResumen_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles TablaClienteResumen.CellContentDoubleClick
         txt_dniCliente.Text = TablaClienteResumen.SelectedCells.Item(0).Value
+    End Sub
+
+    Private Sub ActualizarCampos_Click(sender As Object, e As EventArgs) Handles ActualizarCampos.Click
+        cargardatos()
     End Sub
 End Class
